@@ -10,13 +10,13 @@ import Footer from '../Footer';
 //Component of the web application
 export default function App() {
     return (
-        <>
+        <StyledAppContainer>
             <Header />
             <Routes>
                 <Route path="/" element={<Home />}></Route>
                 <Route path="*" element={<ErrorNotFound />}></Route>
             </Routes>
             <Footer />
-        </>
+        </StyledAppContainer>
     );
 }

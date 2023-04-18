@@ -3,11 +3,25 @@ import { createGlobalStyle } from 'styled-components';
 
 //Global styles
 export default createGlobalStyle`
-    /** {
-        font-family: 'Lato', sans-serif;
-        font-size: 18px;
-        font-weight: 400;
+    * {
+        font-family: Avenir, Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
         margin: 0;
         padding: 0;
-    }*/
+        color: #2C3E50;
+    }
+    .sr-only {
+        border: 0 !important;
+        clip: rect(1px, 1px, 1px, 1px) !important;
+        -webkit-clip-path: inset(50%) !important;
+        clip-path: inset(50%) !important;
+        height: 1px !important;
+        margin: -1px !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+        position: absolute !important;
+        width: 1px !important;
+        white-space: nowrap !important;
+    }
 `;
