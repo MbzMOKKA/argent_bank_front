@@ -1,7 +1,7 @@
 //Imports
 import React from 'react';
-import Hero from '../../components/Hero';
-import Features from '../../components/Features';
+import Hero from '../../Hero';
+import Features from '../../Features';
 
 //Component of the homepage
 export default function Home() {
