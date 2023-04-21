@@ -33,6 +33,9 @@ export const StyledSignInForm = Styled.form`
         background-color: #00bc77;
         color: #fff;
         text-decoration: underline;
+        :hover {
+            cursor: pointer;
+        }
     }
 `;
 

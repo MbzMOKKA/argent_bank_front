@@ -2,15 +2,19 @@
 import React from 'react';
 import './utils/style/main.css';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import GlobalStyle from './utils/style/GlobalStyle';
+import store from './utils/store';
+import { Provider } from 'react-redux';
 import App from './components/App';
 
 //Render
 const root = ReactDOM.createRoot(document.getElementById('root')!);
 root.render(
-    <BrowserRouter>
-        <GlobalStyle />
-        <App />
-    </BrowserRouter>
+    <Router>
+        <Provider store={store}>
+            <GlobalStyle />
+            <App />
+        </Provider>
+    </Router>
 );
