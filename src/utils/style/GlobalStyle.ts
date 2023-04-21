@@ -11,6 +11,9 @@ export default createGlobalStyle`
         padding: 0;
         color: #2C3E50;
     }
+    html {
+        text-align: center;
+    }
     .sr-only {
         border: 0 !important;
         clip: rect(1px, 1px, 1px, 1px) !important;
@@ -23,5 +26,8 @@ export default createGlobalStyle`
         position: absolute !important;
         width: 1px !important;
         white-space: nowrap !important;
+    }
+    .bg-dark {
+        background-color: #12002b;
     }
 `;

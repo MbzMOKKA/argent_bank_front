@@ -13,7 +13,7 @@ export default function Header() {
                 <h1 className="sr-only">Argent Bank</h1>
             </StyledLogo>
             <StyledSignUp>
-                <Link to="/sign-in">
+                <Link to="/login">
                     <i className="fa fa-user-circle" />
                     Sign In
                 </Link>
