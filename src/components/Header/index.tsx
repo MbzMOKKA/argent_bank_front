@@ -26,7 +26,7 @@ export default function Header() {
                     <HeaderButton text="Sign In" route="/login" iconClassName="fa fa-user-circle" />
                 ) : (
                     <>
-                        <HeaderButton text="Tony" route="/profile" iconClassName="fa fa-user-circle" />
+                        <HeaderButton text={'{USER_NAME}'} route="/profile" iconClassName="fa fa-user-circle" />
                         <HeaderButton text="Sign Out" route="/" onClick={signOut} iconClassName="fa fa-sign-out" />
                     </>
                 )}

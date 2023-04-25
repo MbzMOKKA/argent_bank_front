@@ -30,4 +30,10 @@ export default createGlobalStyle`
     .bg-dark {
         background-color: #12002b;
     }
+    h1 {
+        font-size: 2em;
+    }
+    button:hover {
+        cursor: pointer;
+    }
 `;
