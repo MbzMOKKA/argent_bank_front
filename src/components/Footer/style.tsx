@@ -1,8 +1,8 @@
 //Imports
-import Styled from 'styled-components';
+import styled from 'styled-components';
 
 //Local styles
-export const StyledFooter = Styled.footer`
+export const StyledFooter = styled.footer`
     display: flex;
     justify-content: center;
     border-top: 2px solid #ccc;

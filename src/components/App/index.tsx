@@ -1,10 +1,10 @@
 //Imports
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Home from '../pages/Home';
-import Login from '../pages/Login';
-import Profile from '../pages/Profile';
-import ErrorNotFound from '../pages/ErrorNotFound';
+import Home from '../../pages/Home';
+import Login from '../../pages/Login';
+import Profile from '../../pages/Profile';
+import ErrorNotFound from '../../pages/ErrorNotFound';
 import { StyledAppContainer } from './style';
 import Header from '../Header';
 import Footer from '../Footer';

@@ -10,7 +10,7 @@ type FeatureProps = {
     description: string;
 };
 
-//Component of the homepage feature list
+//Component of a feature of the service in the homepage
 export default function Feature(props: FeatureProps) {
     const { icon, iconAlt, title, description } = props;
 

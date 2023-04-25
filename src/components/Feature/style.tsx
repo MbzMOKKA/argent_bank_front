@@ -1,8 +1,8 @@
 //Imports
-import Styled from 'styled-components';
+import styled from 'styled-components';
 
 //Local styles
-export const StyledFeature = Styled.div`
+export const StyledFeature = styled.div`
     flex: 1;
     padding: 2.5rem;
     text-align: center;

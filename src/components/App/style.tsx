@@ -1,9 +1,9 @@
 //Imports
-import Styled from 'styled-components';
+import styled from 'styled-components';
 
 //Local styles
-export const StyledAppContainer = Styled.div`
+export const StyledAppContainer = styled.div`
     display: flex;
     flex-direction: column;
-    min-height : 100vh;
+    min-height: 100vh;
 `;

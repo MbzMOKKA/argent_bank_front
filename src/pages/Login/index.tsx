@@ -2,8 +2,8 @@
 import React, { useRef } from 'react';
 import { StyledInputWrapper, StyledLogin, StyledRememberMe, StyledSignInForm, StyledSignInModal } from './style';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectToken, setToken } from '../../../features/auth/authSlice';
-import { userLogin } from '../../../utils/apiHandler';
+import { selectToken, setToken } from '../../features/auth/authSlice';
+import { userLogin } from '../../utils/apiHandler';
 import { useNavigate } from 'react-router-dom';
 
 //Component of the login page
@@ -24,7 +24,9 @@ export default function Login() {
         }
         const token = await userLogin(refInputEmail.current.value, refInputPassword.current.value);
         dispatch(setToken(token));
-        redirect('/profile', { replace: true });
+        if (token !== null) {
+            redirect('/profile', { replace: true });
+        }
     }
 
     return (

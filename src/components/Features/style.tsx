@@ -1,8 +1,8 @@
 //Imports
-import Styled from 'styled-components';
+import styled from 'styled-components';
 
 //Local styles
-export const StyledFeatures = Styled.section`
+export const StyledFeatures = styled.section`
     display: flex;
     flex-direction: column;
     @media (min-width: 920px) {

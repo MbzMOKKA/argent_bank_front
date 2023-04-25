@@ -2,7 +2,7 @@
 import React from 'react';
 import { StyledHero } from './style';
 
-//Component of the web application
+//Component of the hero section
 export default function Hero() {
     return (
         <StyledHero>

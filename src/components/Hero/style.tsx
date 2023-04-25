@@ -1,9 +1,9 @@
 //Imports
-import Styled from 'styled-components';
+import styled from 'styled-components';
 import background from '../../assets/bank-tree.jpeg';
 
 //Local styles
-export const StyledHero = Styled.div`
+export const StyledHero = styled.div`
     background-image: url(${background});
     background-position: 0 -50px;
     background-size: cover;

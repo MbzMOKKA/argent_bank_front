@@ -1,16 +1,16 @@
 //Imports
 import { Link } from 'react-router-dom';
-import Styled from 'styled-components';
+import styled from 'styled-components';
 
 //Local styles
-export const StyledHeader = Styled.header`
+export const StyledHeader = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px 20px;
 `;
 
-export const StyledLogo = Styled(Link)`
+export const StyledLogo = styled(Link)`
     display: flex;
     align-items: center;
     img {
@@ -19,19 +19,6 @@ export const StyledLogo = Styled(Link)`
     }
 `;
 
-export const StyledSignUp = Styled.div`
+export const StyledButtonContainer = styled.div`
     display: flex;
-    align-items: center;
-    a {
-        text-decoration: none;
-        margin-right: 0.5rem;
-        font-weight: bold;
-        color: #2c3e50;
-    }
-    a:hover {
-        text-decoration: none;
-    }
-    i {
-        margin-right: 5px;
-    }
 `;
