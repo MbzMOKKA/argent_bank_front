@@ -1,8 +1,8 @@
 //Imports
-import Styled from 'styled-components';
+import styled from 'styled-components';
 
 //Local styles
-export const StyledAccount = Styled.div`
+export const StyledAccount = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,7 +20,7 @@ export const StyledAccount = Styled.div`
     }
 `;
 
-export const StyledInfos = Styled.div`
+export const StyledInfos = styled.div`
     width: 100%;
     flex: 1;
     h3 {
@@ -31,7 +31,7 @@ export const StyledInfos = Styled.div`
     }
 `;
 
-export const StyledCTA = Styled.button`
+export const StyledCTA = styled.button`
     width: 100%;
     padding: 8px;
     font-size: 1.1rem;
@@ -45,12 +45,12 @@ export const StyledCTA = Styled.button`
     }
 `;
 
-export const StyledBalance = Styled.p`
+export const StyledBalance = styled.p`
     margin: 0;
     font-size: 2.5rem;
     font-weight: bold;
 `;
 
-export const StyledBalanceDescription = Styled.p`
+export const StyledBalanceDescription = styled.p`
     margin: 0;
 `;

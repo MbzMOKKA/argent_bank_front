@@ -1,12 +1,12 @@
 //Imports
-import Styled from 'styled-components';
+import styled from 'styled-components';
 
 //Local styles
-export const StyledLogin = Styled.main`
+export const StyledLogin = styled.main`
     flex: 1;
 `;
 
-export const StyledSignInModal = Styled.section`
+export const StyledSignInModal = styled.section`
     box-sizing: border-box;
     background-color: white;
     width: 300px;
@@ -21,7 +21,7 @@ export const StyledSignInModal = Styled.section`
     }
 `;
 
-export const StyledSignInForm = Styled.form`
+export const StyledSignInForm = styled.form`
     button {
         display: block;
         width: 100%;
@@ -39,7 +39,7 @@ export const StyledSignInForm = Styled.form`
     }
 `;
 
-export const StyledInputWrapper = Styled.div`
+export const StyledInputWrapper = styled.div`
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -53,7 +53,7 @@ export const StyledInputWrapper = Styled.div`
     }
 `;
 
-export const StyledRememberMe = Styled.div`
+export const StyledRememberMe = styled.div`
     display: flex;
     label {
         margin-left: 0.25rem;
