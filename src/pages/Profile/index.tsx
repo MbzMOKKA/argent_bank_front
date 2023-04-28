@@ -1,22 +1,10 @@
 //Imports
-import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
-import { selectToken } from '../../features/auth/authSlice';
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
 import { StyledAccounts, StyledEditButton, StyledProfile, StyledUserInfos } from './style';
 import Account from '../../components/Account';
 
 //Component of the profile page
 export default function Profile() {
-    const redirect = useNavigate();
-    const token = useSelector(selectToken);
-
-    useEffect(() => {
-        if (token === null) {
-            redirect('/login', { replace: true });
-        }
-    }, [redirect, token]);
-
     return (
         <StyledProfile className="bg-dark">
             <StyledUserInfos>

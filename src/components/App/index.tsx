@@ -8,6 +8,7 @@ import ErrorNotFound from '../../pages/ErrorNotFound';
 import { StyledAppContainer } from './style';
 import Header from '../Header';
 import Footer from '../Footer';
+import RequireAuth from '../RequireAuth';
 
 //Component of the web application
 export default function App() {
@@ -15,10 +16,14 @@ export default function App() {
         <StyledAppContainer>
             <Header />
             <Routes>
-                <Route path="/" element={<Home />}></Route>
-                <Route path="/login" element={<Login />}></Route>
-                <Route path="/profile" element={<Profile />}></Route>
-                <Route path="*" element={<ErrorNotFound />}></Route>
+                <Route path="/">
+                    <Route index element={<Home />} />
+                    <Route path="login" element={<Login />} />
+                    <Route element={<RequireAuth />}>
+                        <Route path="profile" element={<Profile />} />
+                    </Route>
+                </Route>
+                <Route path="*" element={<ErrorNotFound />} />
             </Routes>
             <Footer />
         </StyledAppContainer>
