@@ -1,7 +1,7 @@
 //Imports
-import React from 'react';
-import { StyledNotFound } from './style';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { StyledNotFound } from "./style";
+import { Link } from "react-router-dom";
 
 //Component of the page shown if the route is incorrect
 export default function ErrorNotFound() {

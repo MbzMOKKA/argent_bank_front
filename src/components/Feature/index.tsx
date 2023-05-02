@@ -1,6 +1,6 @@
 //Imports
-import React from 'react';
-import { StyledFeature } from './style';
+import React from "react";
+import { StyledFeature } from "./style";
 
 //Types
 type FeatureProps = {

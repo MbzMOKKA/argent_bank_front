@@ -1,10 +1,16 @@
 //Imports
-import React, { useRef } from 'react';
-import { StyledInputWrapper, StyledLogin, StyledRememberMe, StyledSignInForm, StyledSignInModal } from './style';
-import { useDispatch } from 'react-redux';
-import { setToken } from '../../features/auth/authSlice';
-import { userLogin } from '../../utils/apiHandler';
-import { useNavigate } from 'react-router-dom';
+import React, { useRef } from "react";
+import {
+    StyledInputWrapper,
+    StyledLogin,
+    StyledRememberMe,
+    StyledSignInForm,
+    StyledSignInModal,
+} from "./style";
+import { useDispatch } from "react-redux";
+import { setToken } from "../../features/auth/authSlice";
+import { userLogin } from "../../utils/apiHandler";
+import { useNavigate } from "react-router-dom";
 
 //Component of the login page
 export default function Login() {
@@ -21,10 +27,13 @@ export default function Login() {
         if (!refInputPassword.current) {
             return;
         }
-        const token = await userLogin(refInputEmail.current.value, refInputPassword.current.value);
+        const token = await userLogin(
+            refInputEmail.current.value,
+            refInputPassword.current.value
+        );
         dispatch(setToken(token));
         if (token !== null) {
-            redirect('/profile', { replace: true });
+            redirect("/profile", { replace: true });
         }
     }
 
@@ -36,11 +45,19 @@ export default function Login() {
                 <StyledSignInForm onSubmit={handleSubmit}>
                     <StyledInputWrapper>
                         <label htmlFor="input-email">Email</label>
-                        <input type="text" id="input-email" ref={refInputEmail} />
+                        <input
+                            type="text"
+                            id="input-email"
+                            ref={refInputEmail}
+                        />
                     </StyledInputWrapper>
                     <StyledInputWrapper>
                         <label htmlFor="input-password">Password</label>
-                        <input type="password" id="input-password" ref={refInputPassword} />
+                        <input
+                            type="password"
+                            id="input-password"
+                            ref={refInputPassword}
+                        />
                     </StyledInputWrapper>
                     <StyledRememberMe>
                         <input type="checkbox" id="input-remember" />

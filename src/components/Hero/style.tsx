@@ -1,6 +1,6 @@
 //Imports
-import styled from 'styled-components';
-import background from '../../assets/bank-tree.jpeg';
+import styled from "styled-components";
+import background from "../../assets/bank-tree.jpeg";
 
 //Local styles
 export const StyledHero = styled.div`

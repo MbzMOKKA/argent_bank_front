@@ -1,6 +1,6 @@
 //Imports
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 //Local styles
 export const StyledHeader = styled.header`

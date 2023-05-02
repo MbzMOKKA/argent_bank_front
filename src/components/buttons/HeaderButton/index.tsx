@@ -1,7 +1,7 @@
 //Imports
-import React from 'react';
-import { StyledHeaderButton } from './style';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { StyledHeaderButton } from "./style";
+import { Link } from "react-router-dom";
 
 //Types
 type HeaderButtonProps = {
