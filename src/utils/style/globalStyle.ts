@@ -33,7 +33,22 @@ export default createGlobalStyle`
     h1 {
         font-size: 2em;
     }
-    button:hover {
-        cursor: pointer;
+    input{
+        //border: none;
+        padding: 5px;
+        font-size: 1.2rem;
     }
+    button {
+        background-color: #00bc77;
+        border: none;
+        color: #fff;
+        font-weight: bold;
+        padding: 8px;
+        font-size: 1.1rem;
+        margin-top: 1rem;
+        :hover {
+            cursor: pointer;
+        }
+    }
+
 `;

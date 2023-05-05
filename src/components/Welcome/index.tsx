@@ -1,25 +1,45 @@
 //Imports
-import React from "react";
+import React, { useState } from "react";
 import { StyledWelcome, StyledEditButton } from "./style";
 import { formatUserName } from "../../utils/formatStrings";
 import { selectUser } from "../../features/auth/authSlice";
 import { useSelector } from "react-redux";
+import EditProfile from "../EditProfile";
 
-//Component of the hero section
+//Component of the welcome section of the profile page
 export default function Welcome() {
     const user = useSelector(selectUser);
+    const [editing, setEditing] = useState<boolean>();
+
+    function startEditing() {
+        setEditing(true);
+    }
 
     return (
         <StyledWelcome>
             <h1>
                 Welcome back
-                <br />
-                {user === null
-                    ? "..."
-                    : formatUserName(user.firstName, user.lastName)}
-                !
+                {editing === false ? (
+                    <>
+                        <br />
+                        {user === null
+                            ? "..."
+                            : formatUserName(user.firstName, user.lastName)}
+                        !
+                    </>
+                ) : null}
             </h1>
-            <StyledEditButton>Edit Name</StyledEditButton>
+            {editing && user ? (
+                <EditProfile
+                    setEditing={setEditing}
+                    firstName={user.firstName}
+                    lastName={user.lastName}
+                />
+            ) : (
+                <StyledEditButton onClick={startEditing}>
+                    Edit Name
+                </StyledEditButton>
+            )}
         </StyledWelcome>
     );
 }

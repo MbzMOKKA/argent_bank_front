@@ -33,13 +33,6 @@ export const StyledInfos = styled.div`
 
 export const StyledCTA = styled.button`
     width: 100%;
-    padding: 8px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin-top: 1rem;
-    border-color: #00bc77;
-    background-color: #00bc77;
-    color: #fff;
     @media (min-width: 720px) {
         width: 200px;
     }

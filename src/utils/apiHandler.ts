@@ -30,3 +30,24 @@ export async function userGetInfos(token: string | null) {
         return null;
     }
 }
+
+export async function userEditName(
+    token: string | null,
+    firstName: string,
+    lastName: string
+) {
+    try {
+        const response = await axios.put(
+            "http://localhost:3001/api/v1/user/profile",
+            {
+                firstName,
+                lastName,
+            },
+            { headers: { Authorization: `Bearer ${token}` } }
+        );
+        return response.data.body;
+    } catch (error) {
+        console.error("Error fetching user infos:", error);
+        return null;
+    }
+}
