@@ -3,7 +3,7 @@ import styled from "styled-components";
 import background from "../../assets/bank-tree.jpeg";
 
 //Local styles
-export const StyledHero = styled.div`
+export const StyledHero = styled.section`
     background-image: url(${background});
     background-position: 0 -50px;
     background-size: cover;

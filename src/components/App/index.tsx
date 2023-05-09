@@ -1,5 +1,5 @@
 //Imports
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "../../pages/Home";
 import Login from "../../pages/Login";
@@ -16,10 +16,11 @@ import { userGetInfos } from "../../utils/apiHandler";
 //Component of the web application
 export default function App() {
     const dispatch = useDispatch();
+    const [error, setError] = useState<string | null>(null);
     const token = useSelector(selectToken);
 
     async function fetchUserInfos() {
-        const user = await userGetInfos(token);
+        const user = await userGetInfos(token, setError);
         if (user === null) {
             dispatch(logOut);
         } else {

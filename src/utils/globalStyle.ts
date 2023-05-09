@@ -34,7 +34,6 @@ export default createGlobalStyle`
         font-size: 2em;
     }
     input{
-        //border: none;
         padding: 5px;
         font-size: 1.2rem;
     }
@@ -50,5 +49,4 @@ export default createGlobalStyle`
             cursor: pointer;
         }
     }
-
 `;

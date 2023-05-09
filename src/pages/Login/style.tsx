@@ -1,5 +1,6 @@
 //Imports
 import styled from "styled-components";
+import ErrorMessage from "../../components/ErrorMessage";
 
 //Local styles
 export const StyledLogin = styled.main`
@@ -13,6 +14,9 @@ export const StyledSignInModal = styled.section`
     margin: 0 auto;
     margin-top: 3rem;
     padding: 2rem;
+`;
+
+export const StyledModalHeader = styled.header`
     i {
         font-size: 5rem;
     }
@@ -47,4 +51,8 @@ export const StyledRememberMe = styled.div`
     label {
         margin-left: 0.25rem;
     }
+`;
+
+export const StyledErrorMessage = styled(ErrorMessage)`
+    margin-top: 12px;
 `;

@@ -4,10 +4,10 @@ import argentBankLogo from "../../assets/argent_bank_logo.png";
 import { StyledButtonContainer, StyledHeader, StyledLogo } from "./style";
 import { useDispatch, useSelector } from "react-redux";
 import { logOut, selectUser } from "../../features/auth/authSlice";
-import HeaderButton from "../buttons/HeaderButton";
+import HeaderButton from "../HeaderButton";
 import { formatUserName } from "../../utils/formatStrings";
 
-//Component of the header
+//Component of the header of the web application
 export default function Header() {
     const user = useSelector(selectUser);
     const dispatch = useDispatch();

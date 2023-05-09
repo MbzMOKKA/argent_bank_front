@@ -1,13 +1,18 @@
 //Imports
 import React, { useState } from "react";
-import { StyledButtons, StyledForm, StyledInputs } from "./style";
+import {
+    StyledButtons,
+    StyledErrorMessage,
+    StyledForm,
+    StyledInputs,
+} from "./style";
 import { userEditName } from "../../utils/apiHandler";
 import { useDispatch, useSelector } from "react-redux";
 import { selectToken, setUser } from "../../features/auth/authSlice";
 
 //Types
 type EditProfileProps = {
-    setEditing: React.Dispatch<React.SetStateAction<boolean | undefined>>;
+    setEditing: React.Dispatch<React.SetStateAction<boolean>>;
     firstName: string;
     lastName: string;
 };
@@ -16,6 +21,7 @@ type EditProfileProps = {
 export default function EditProfile(props: EditProfileProps) {
     const { setEditing, firstName, lastName } = props;
 
+    const [error, setError] = useState<string | null>(null);
     const [inputFirstName, setInputFirstName] = useState(firstName);
     const [inputLastName, setInputLastName] = useState(lastName);
 
@@ -33,18 +39,23 @@ export default function EditProfile(props: EditProfileProps) {
         setEditing(false);
     }
 
+    const emptyInputErrorMsg = "The name cannot be empty!";
+
     async function submitChanges(e: any) {
         e.preventDefault();
         if (inputFirstName.length === 0) {
+            setError(emptyInputErrorMsg);
             return;
         }
         if (inputLastName.length === 0) {
+            setError(emptyInputErrorMsg);
             return;
         }
         const updatedUser = await userEditName(
             token,
             inputFirstName,
-            inputLastName
+            inputLastName,
+            setError
         );
         if (updatedUser !== null) {
             dispatch(setUser(updatedUser));
@@ -66,6 +77,7 @@ export default function EditProfile(props: EditProfileProps) {
                     onChange={changeLastName}
                 />
             </StyledInputs>
+            <StyledErrorMessage text={error} />
             <StyledButtons>
                 <button onClick={submitChanges}>Save</button>
                 <button onClick={cancelEditing}>Cancel</button>

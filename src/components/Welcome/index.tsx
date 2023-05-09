@@ -1,6 +1,6 @@
 //Imports
 import React, { useState } from "react";
-import { StyledWelcome, StyledEditButton } from "./style";
+import { StyledWelcome } from "./style";
 import { formatUserName } from "../../utils/formatStrings";
 import { selectUser } from "../../features/auth/authSlice";
 import { useSelector } from "react-redux";
@@ -9,7 +9,7 @@ import EditProfile from "../EditProfile";
 //Component of the welcome section of the profile page
 export default function Welcome() {
     const user = useSelector(selectUser);
-    const [editing, setEditing] = useState<boolean>();
+    const [editing, setEditing] = useState<boolean>(false);
 
     function startEditing() {
         setEditing(true);
@@ -36,9 +36,7 @@ export default function Welcome() {
                     lastName={user.lastName}
                 />
             ) : (
-                <StyledEditButton onClick={startEditing}>
-                    Edit Name
-                </StyledEditButton>
+                <button onClick={startEditing}>Edit Name</button>
             )}
         </StyledWelcome>
     );

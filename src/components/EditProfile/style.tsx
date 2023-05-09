@@ -1,5 +1,6 @@
 //Imports
 import styled from "styled-components";
+import ErrorMessage from "../ErrorMessage";
 
 //Local styles
 export const StyledForm = styled.form`
@@ -24,4 +25,8 @@ export const StyledButtons = styled.div`
         margin: 0px 6px;
         width: 12vw;
     }
+`;
+
+export const StyledErrorMessage = styled(ErrorMessage)`
+    margin-top: 12px;
 `;

@@ -1,7 +1,12 @@
 //Imports
 import axios from "axios";
 
-export async function userLogin(email: string, password: string) {
+//Send the email and password to the API and returns the token or null
+export async function userLogin(
+    email: string,
+    password: string,
+    setError: any
+) {
     try {
         const response = await axios.post(
             "http://localhost:3001/api/v1/user/login",
@@ -11,13 +16,14 @@ export async function userLogin(email: string, password: string) {
             }
         );
         return response.data.body.token;
-    } catch (error) {
-        console.error("Error logging in:", error);
+    } catch (error: any) {
+        setError(error.response.data.message);
         return null;
     }
 }
 
-export async function userGetInfos(token: string | null) {
+//Send the token to the API and returns the user informations or null
+export async function userGetInfos(token: string | null, setError: any) {
     try {
         const response = await axios.post(
             "http://localhost:3001/api/v1/user/profile",
@@ -25,16 +31,18 @@ export async function userGetInfos(token: string | null) {
             { headers: { Authorization: `Bearer ${token}` } }
         );
         return response.data.body;
-    } catch (error) {
-        console.error("Error fetching user infos:", error);
+    } catch (error: any) {
+        setError(error.response.data.message);
         return null;
     }
 }
 
+//Send the token and the new name to the API and returns the user informations or null
 export async function userEditName(
     token: string | null,
     firstName: string,
-    lastName: string
+    lastName: string,
+    setError: any
 ) {
     try {
         const response = await axios.put(
@@ -46,8 +54,8 @@ export async function userEditName(
             { headers: { Authorization: `Bearer ${token}` } }
         );
         return response.data.body;
-    } catch (error) {
-        console.error("Error fetching user infos:", error);
+    } catch (error: any) {
+        setError(error.response.data.message);
         return null;
     }
 }
