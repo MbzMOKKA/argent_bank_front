@@ -14,6 +14,10 @@ export const StyledSignInModal = styled.section`
     margin: 0 auto;
     margin-top: 3rem;
     padding: 2rem;
+    @media (max-width: 400px) {
+        width: 90%;
+        padding: 0.5rem;
+    }
 `;
 
 export const StyledModalHeader = styled.header`

@@ -18,6 +18,10 @@ export const StyledAccount = styled.div`
     @media (min-width: 720px) {
         flex-direction: row;
     }
+    @media (max-width: 350px) {
+        width: 90%;
+        padding: 0.75rem;
+    }
 `;
 
 export const StyledInfos = styled.div`
@@ -42,6 +46,9 @@ export const StyledBalance = styled.p`
     margin: 0;
     font-size: 2.5rem;
     font-weight: bold;
+    @media (max-width: 350px) {
+        font-size: 1.5rem;
+    }
 `;
 
 export const StyledBalanceDescription = styled.p`

@@ -27,6 +27,20 @@ export const StyledHero = styled.section`
             margin-top: 20px;
         }
     }
+    @media (max-width: 400px) {
+        section {
+            margin: 0 auto;
+            width: 180px;
+            padding: 1rem;
+            .subtitle {
+                font-size: 0.9rem;
+            }
+            .text {
+                font-size: 0.8rem;
+                margin-top: 10px;
+            }
+        }
+    }
     @media (min-width: 920px) {
         height: 400px;
         background-position: 0% 33%;

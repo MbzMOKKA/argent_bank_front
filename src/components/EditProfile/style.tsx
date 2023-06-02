@@ -8,13 +8,25 @@ export const StyledForm = styled.form`
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 `;
 
 export const StyledInputs = styled.div`
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     input {
         margin: 0px 6px;
         width: 20vw;
+    }
+    @media (max-width: 700px) {
+        flex-direction: column;
+        input {
+            margin: 6px 0px;
+            width: 90vw;
+        }
     }
 `;
 
@@ -24,6 +36,11 @@ export const StyledButtons = styled.div`
     button {
         margin: 0px 6px;
         width: 12vw;
+    }
+    @media (max-width: 700px) {
+        button {
+            width: 40vw;
+        }
     }
 `;
 

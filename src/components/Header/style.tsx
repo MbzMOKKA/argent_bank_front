@@ -8,6 +8,11 @@ export const StyledHeader = styled.header`
     justify-content: space-between;
     align-items: center;
     padding: 5px 20px;
+    @media (max-width: 300px) {
+        flex-direction: column;
+        padding: 0px;
+        padding-bottom: 12px;
+    }
 `;
 
 export const StyledLogo = styled(Link)`
@@ -16,6 +21,16 @@ export const StyledLogo = styled(Link)`
     img {
         max-width: 100%;
         width: 200px;
+        @media (max-width: 400px) {
+            width: 128px;
+        }
+        @media (max-width: 300px) {
+            margin: auto;
+            width: 70%;
+        }
+        @media (max-width: 250px) {
+            width: 90%;
+        }
     }
 `;
 

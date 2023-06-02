@@ -11,4 +11,9 @@ export const StyledWelcome = styled.section`
         color: #fff;
         margin-top: 24px;
     }
+    @media (max-width: 350px) {
+        h1 {
+            font-size: 1.5em;
+        }
+    }
 `;

@@ -23,4 +23,10 @@ export const StyledFeature = styled.div`
         margin-top: 16px;
         margin-bottom: 16px;
     }
+    @media (max-width: 400px) {
+        padding: 1.5rem;
+        img {
+            width: 60px;
+        }
+    }
 `;
